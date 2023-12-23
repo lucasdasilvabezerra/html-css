@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: estranha;
-    src: url(../fontes/idroid.otf);
+    src: url(/fontes/idroid.otf);
     font-weight: normal;
     font-style: normal;
 
@@ -62,7 +62,9 @@ header>p {
 }
 
 nav {
+   
     padding: 10px;
+
     text-align: center;
 }
 
