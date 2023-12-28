@@ -10,27 +10,41 @@
 <body>
     <h1>Forms 003</h1>
     <form action="cadastro.php" method="get">
-        <p><label for="inome"></label>
-            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo."
-                autocomplete="name">
-        </p>
+        <fieldset>
+            <legend>Dados do Aluno</legend>
+            <p><label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo."
+                    autocomplete="name">
+            </p>
+            <label for="isxfem">Feminino</label>
+            <input type="radio" name="sexo" id="isxfem">
 
-        <p>
-            <label for="imedia">Média</label>
-            <input type="number" name="media" id="imedia" min="0" max="10" step="0.5" required>
-        </p>
-        <p>
-            <label for="iperiodo">Período Letivo</label>
-            <input type="month" name="periodo" id="iperiodo">
-        </p>
-        <p>
-            <label for="idia-prova">Dia da Prova:</label>
-            <input type="date" name="dia-prova" id="idia-prova">
-        </p>
-        <p>
-            <label for="ihr-prova">Horário da Prova:</label>
-            <input type="time" name="hr-prova" id="ihr-prova">
-        </p>
+            <label for="isxmasc">Masculino</label>
+            <input type="radio" name="sexo" id="isxmasc">
+            <p><label for="iemail">E-mail:</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itel">Telefone:</label>
+                <input type="tel" name="tel" id="itel" required autocomplete="tel" pattern="^\d{4}-\d{4}$">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" step="0.5" required>
+            </p>
+            <p>
+                <label for="iperiodo">Período Letivo</label>
+                <input type="month" name="periodo" id="iperiodo">
+            </p>
+            <p>
+                <label for="idia-prova">Dia da Prova:</label>
+                <input type="date" name="dia-prova" id="idia-prova">
+            </p>
+            <p>
+                <label for="ihr-prova">Horário da Prova:</label>
+                <input type="time" name="hr-prova" id="ihr-prova">
+            </p>
+        </fieldset>
 
         <p>
             <input type="submit">
