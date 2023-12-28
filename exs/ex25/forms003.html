@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Forms 003</h1>
-    <form action="cadastro.php" method="get"></form>
+    <form action="cadastro.php" method="get">
+        <p><label for="inome"></label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo."
+                autocomplete="name">
+        </p>
+
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.5" required>
+        </p>
+        <p>
+            <label for="iperiodo">Período Letivo</label>
+            <input type="month" name="periodo" id="iperiodo">
+        </p>
+        <p>
+            <label for="idia-prova">Dia da Prova:</label>
+            <input type="date" name="dia-prova" id="idia-prova">
+        </p>
+        <p>
+            <label for="ihr-prova">Horário da Prova:</label>
+            <input type="time" name="hr-prova" id="ihr-prova">
+        </p>
+
+        <p>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
+
 </html>
