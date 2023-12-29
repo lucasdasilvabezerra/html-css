@@ -8,6 +8,22 @@
     /*Imprimir*/
     body {
         background-image: url(../imagens/back-print.jpg);
+        /*Desnecessário/Nfunciona*/
+ 
+    }
+    main{
+        border: 2px solid black;
+        width: 90vw;
+    }
+    main h1{
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+    main::after{
+        content: 'Esta impressão foi feita através do site do Lucas';
+        text-decoration: overline;
+        font-size: 0.5em;
     }
 }
 
@@ -32,7 +48,7 @@ img#print {
     /*Tablet*/
     body {
         background-image: url(../imagens/back-tablet.jpg);
-        /*Desnecessário/Nfunciona*/
+
 
     }
 
@@ -86,5 +102,9 @@ img#print {
 
     img#tv {
         display: block;
+    }
+
+    main{
+        max-width: 1100px;
     }
 }
