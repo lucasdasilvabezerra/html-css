@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *{
     margin: 0px;
     padding: 0px;
@@ -9,9 +11,13 @@ body,html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    
+main{
+    max-width: 1300px;
+    margin: auto;
+    height: 5000px;
+   
 }
+
 
 .logo{
     height: 80px;
@@ -37,7 +43,11 @@ nav{
     background-color: rgb(243,113,27);
     height: 40px;
     
-    
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 40px;
+    align-items: center;
+   
     
     
 }
@@ -70,13 +80,9 @@ li>a:hover{
 
 
 
-nav{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
-    grid-template-rows: 40px;
-    align-items: center;
-   
-}
+
+
+
 
 nav>input{
     height: 20px;
@@ -86,6 +92,7 @@ nav>input{
     grid-row: 1/2;
     justify-self: end;
     margin-right: 30px;
+    border-radius: 10px;
 }
 
 nav>label{
@@ -99,61 +106,42 @@ nav i{
 }
 
 .pratos-destaque{
-    background-color: aqua;
+    
     height: 350px;
-    max-width: 1100px;
-    padding: 10px;
-    margin: auto;
+    max-width: 100vw;
+    padding-top: 10px;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 330px;
-    gap: 10px;
-
-    
-    
+    gap: 10px; 
     
 }
 
 .prato-d{
     
-
- 
     background-image: url('../imagens/guaca.jpg');
     background-size: cover;
     background-position: center center;
     border-radius: 15px;
     overflow: hidden;
    
-
    
-    grid-row: 1/2;
+   
     display: grid;
-
-    grid-row: 1/3;
-
-    
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+   
     
 }
+
 
  .prato-d>p{
    
-    background-color: rgba(0, 0, 0, 0.493);
-    padding: 10px;
-    height: 30px;
 
-    
-    
-    grid-row: 2/3;
-    align-self: end;
-
-    text-align: center;
-    color: white;
-    padding-bottom: 30px;
-    
 }
 
-.prato-d:nth-child(2){
+.prato-d:nth-child(2) {
     background-image: url('../imagens/espetinho.jpg');
     
 }
@@ -167,3 +155,130 @@ nav i{
 }
 
 
+.prato-d p{
+  
+    background-color: rgba(0, 0, 0, 0.493);
+    padding: 10px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+    
+    
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: end;
+   
+}
+
+.prato-d a{
+    
+    grid-row: 1/3;
+    grid-column: 1/2;
+    
+    
+}
+
+
+
+/* ---------------- POSTAGENS ---------------- */
+section>h1{
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+ul.grid-postagens{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,400px);
+    list-style-type: none;
+    gap: 15px;
+}
+
+ul.grid-postagens>li.post{
+
+    display: grid;
+    grid-template-columns: repeat(3,fr);
+    grid-template-rows: 200px 150px 50px ;
+    overflow: hidden;
+
+
+}
+ul.grid-postagens>li.post h3{
+
+    font-size: 1.4em;
+    padding: 5px 0px;
+
+}
+
+ul.grid-postagens>li.post p{
+
+    font-size: 1.2em;
+    text-align: justify;
+    text-indent: 20px;
+}
+ul.grid-postagens>li.post>.post-footer{
+   align-self: end;
+    
+}
+ul.grid-postagens>li.post>.post-footer>span{
+    font-size: 1em;
+    color: rgb(105, 105, 105);
+    font-style: italic;
+    
+}
+
+/* ----------------- FILHOS ---------------------*/
+
+
+li.post:nth-child(1)>picture{
+    
+    height: 100%;
+    margin: 0;
+    background-image: url('../imagens/burrito.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    
+}
+
+
+
+li.post:nth-child(2)>picture{
+    background-image: url('../imagens/ramen.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
+
+
+li.post:nth-child(3)>picture{
+    background-image: url('../imagens/arancini.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
+
+li.post:nth-child(4)>picture{
+    background-image: url('../imagens/quesadilla.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
+li.post:nth-child(5)>picture{
+    background-image: url('../imagens/torta-laranja.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
+li.post:nth-child(6)>picture{
+    background-image: url('../imagens/camarao-empanado.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+
+.post-sinopse{
+    grid-row: 2/3;
+    
+}
