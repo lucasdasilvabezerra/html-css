@@ -105,6 +105,7 @@ nav i{
     color: white;
 }
 
+/* -------------------- PRATOS DESTAQUE -----------------------*/
 .pratos-destaque{
     
     height: 350px;
@@ -113,9 +114,10 @@ nav i{
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 330px;
+    grid-template-rows: 400px;
     gap: 10px; 
     
+    margin-bottom: 60px;
 }
 
 .prato-d{
@@ -179,7 +181,9 @@ nav i{
     
 }
 
-
+.pratos-destaque>.prato-d:hover{
+    box-shadow: 0px 0px 4px black;
+}
 
 /* ---------------- POSTAGENS ---------------- */
 section>h1{
@@ -192,7 +196,8 @@ ul.grid-postagens{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,400px);
     list-style-type: none;
-    gap: 15px;
+    gap: 50px 20px;
+    
 }
 
 ul.grid-postagens>li.post{
@@ -201,6 +206,8 @@ ul.grid-postagens>li.post{
     grid-template-columns: repeat(3,fr);
     grid-template-rows: 200px 150px 50px ;
     overflow: hidden;
+
+    
 
 
 }
@@ -218,6 +225,7 @@ ul.grid-postagens>li.post p{
     text-indent: 20px;
 }
 ul.grid-postagens>li.post>.post-footer{
+
    align-self: end;
     
 }
@@ -240,7 +248,8 @@ li.post:nth-child(1)>picture{
     background-position: center bottom;
     background-repeat: no-repeat;
     
-    
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 
@@ -249,6 +258,10 @@ li.post:nth-child(2)>picture{
     background-image: url('../imagens/ramen.jpg');
     background-size: cover;
     background-position: center right;
+
+   grid-row: 1;
+   grid-column: 1;
+    
 }
 
 
@@ -257,6 +270,9 @@ li.post:nth-child(3)>picture{
     background-image: url('../imagens/arancini.jpg');
     background-size: cover;
     background-position: center right;
+
+    grid-row: 1;
+    grid-column: 1;
 }
 
 
@@ -264,21 +280,44 @@ li.post:nth-child(4)>picture{
     background-image: url('../imagens/quesadilla.jpg');
     background-size: cover;
     background-position: center right;
+
+    grid-row: 1;
+    grid-column: 1;
 }
 
 li.post:nth-child(5)>picture{
     background-image: url('../imagens/torta-laranja.jpg');
     background-size: cover;
     background-position: center right;
+
+    grid-row: 1;
+    grid-column: 1;
 }
 
 li.post:nth-child(6)>picture{
     background-image: url('../imagens/camarao-empanado.jpg');
     background-size: cover;
     background-position: center right;
+
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .post-sinopse{
     grid-row: 2/3;
     
 }
+
+.post>a{
+   
+    
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+.post:hover{
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.507);
+}
+
+
+
