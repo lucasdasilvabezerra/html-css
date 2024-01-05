@@ -220,7 +220,8 @@ ul.grid-postagens>li.post h3{
 
 ul.grid-postagens>li.post p{
 
-    font-size: 1.2em;
+    font-size: 1em;
+    line-height: 25px;
     text-align: justify;
     text-indent: 20px;
 }
